@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luz y Lienzo</title>
-    <link rel="stylesheet" href="./CSS/styles.css">
-
+    <link rel="stylesheet" href="./html/CSS/styles.css">
 </head>
 
 <body>
@@ -20,7 +19,9 @@
         </nav>
     </section>
     
+    
     <section class="hero">
+        <div class="overlay"></div>
         <div class="hero-text">
             <h2>Explora el Arte con Luz y Lienzo</h2>
             <p>Un espacio donde el arte se encuentra con la luz.</p>
@@ -28,6 +29,21 @@
         </div>
     </section>
 
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="/GaleriaArte/html/imagenes/close-up-1721060_1280.jpg" alt="Imagen 1">
+                <img src="/GaleriaArte/html/imagenes/watercolor-5049980_1280.jpg" alt="Imagen 2">
+                <img src="/GaleriaArte/html/imagenes/palace-7701252_1280.jpg" alt="Imagen 3">
+                <img src="/GaleriaArte/html/imagenes/coffee-3120750_1280.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <div class="carousel-buttons">
+            <button id="prevBtn"><</button>
+            <button id="nextBtn">></button>
+        </div>
+    </section>
+    <script src="/GaleriaArte/JS/carusel.js"></script>
     
     <footer class="footer">
         <div class="footer-content">
