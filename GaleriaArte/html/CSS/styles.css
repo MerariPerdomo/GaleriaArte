@@ -293,3 +293,29 @@ body {
 .carousel-buttons button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+.imagen-container {
+    position: relative;
+    overflow: hidden; 
+}
+
+
+.titulo {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición */
+    background-color: rgba(0, 0, 0, 0.76); /* Negro con transparencia */
+    color: white;
+    padding: 15px;
+    display: none;
+    text-align: center;
+    border-radius: 5%;
+}
+
+.imagen-container:hover img {
+    opacity: 0.7; /* Oculta la imagen */
+}
+
+.imagen-container:hover .titulo {
+    display: block; /* Muestra el título al pasar el cursor */
+}
