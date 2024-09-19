@@ -2,16 +2,39 @@
     font-family: 'Satoshi';
     src: url('./Fonts/Satoshi-Regular.woff') format('woff');
 }
+#contact h2 {
+    font-weight: 600;
+    color: #333;
+}
+
+#contact form input, 
+#contact form textarea {
+    border-radius: 8px;
+    padding: 12px;
+}
+
+#contact form button {
+    border-radius: 25px;
+    padding: 10px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #0056b3;
+}
+
 
 * {
     margin: 0;
+    background-color:#FFF1BB ;
     padding: 0;
-    box-sizing: border-box;
     
 }
 body {
     background-color: #FFF1BB;
-    font-family: 'Satoshi';
 }
 .navbar {
     display: flex;
@@ -156,7 +179,6 @@ body {
 .gallery {
     padding: 60px 30px;
     text-align: center;
-    background-color: #fff;
 }
 
 .gallery h2 {
