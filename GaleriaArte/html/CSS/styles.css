@@ -250,7 +250,6 @@ body {
 /* Contenedor del carrusel */
 .carousel {
     position: relative;
-    width: 100%;
     overflow: hidden;
 }
 
@@ -263,6 +262,7 @@ body {
 
 .carousel-slide {
     display: flex;
+    width: 100%;
     transition: transform 0.5s ease-in-out; /* Animación suave para el movimiento */
 }
 

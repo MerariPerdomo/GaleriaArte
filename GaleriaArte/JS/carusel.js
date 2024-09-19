@@ -4,30 +4,33 @@ const images = document.querySelectorAll('.carousel-slide img');
 let counter = 0;
 const size = images[0].clientWidth;
 
+// Función para mover el carrusel
+function moveCarousel() {
+  slide.style.transition = 'transform 0.5s ease-in-out';
+  slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  
+  // Si estamos en el último elemento, volvemos al inicio sin animación
+  if (counter >= images.length - 1) {
+    setTimeout(() => {
+      counter = 0;
+      slide.style.transition = 'none';
+      slide.style.transform = 'translateX(0)';
+    }, 500);
+  }
+}
+
 document.getElementById('nextBtn').addEventListener('click', () => {
-    if (counter >= images.length - 1) {
-        counter = 0; // Volver al inicio si se llega al final
-    } else {
-        counter++;
-    }
-    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  counter++;
+  moveCarousel();
 });
 
 document.getElementById('prevBtn').addEventListener('click', () => {
-    if (counter <= 0) {
-        counter = images.length - 1; // Ir al último elemento si se está en el primero
-    } else {
-        counter--;
-    }
-    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  counter--;
+  moveCarousel();
 });
 
 /* Animación automática */
 setInterval(() => {
-    if (counter >= images.length - 1) {
-        counter = 0; // Volver al inicio cuando se llegue al final
-    } else {
-        counter++;
-    }
-    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-}, 3000); // Cambia de imagen cada 3 segundos
+  counter++;
+  moveCarousel();
+}, 3000);
