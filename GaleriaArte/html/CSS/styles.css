@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Satoshi';
-    src: url('/GaleriaArte/html/fuentes/Satoshi-Regular.woff') format('woff');
+    src: url('/html/fuentes/Satoshi-Regular.woff') format('woff');
 }
 #contact h2 {
     font-weight: 600;
@@ -318,4 +318,66 @@ body {
 
 .imagen-container:hover .titulo {
     display: block; /* Muestra el título al pasar el cursor */
+}
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.lightbox-content img, .lightbox-content video {
+    max-width: 100%;
+    max-height: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+    opacity: 0.8;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
 }
