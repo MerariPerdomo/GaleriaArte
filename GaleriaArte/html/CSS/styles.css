@@ -182,7 +182,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.721), rgba(0,0,0,0.4)), url('/GaleriaArte/html/imagenes/fondoinicio.png') no-repeat center center/cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.721), rgba(0,0,0,0.4)), url('/html/imagenes/fondoinicio.png') no-repeat center center/cover;
     color: white;
     text-align: center;
 }
