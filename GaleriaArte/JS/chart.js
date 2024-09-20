@@ -1,18 +1,20 @@
-const labels = ['Enero', 'Febrero', 'Marzo', 'Abril','Mayo','Junio','Julio', 'Agosto']
+
+const labels = ['Arte Abstracto','Realismo','Fotografia y Videos','Arte moderno']
+const colors = ['#DD7C3C', 'rgb(99,201,122)', 'rgb(245, 100, 78)', 'rgb(229,224,88)'];
 
 const graph = document.querySelector("#grafica");
 
 const data = {
-	labels: labels,
-	datasets: [{
-		label:"Cantidad de personas que nos visitan",
-		data: [124,143,122,100,215,123,165,142],
-		backgroundColor: 'rgb(245, 154, 78)'
-	}]
+    labels: labels,
+    datasets: [{
+        data: [18,5,26,7],
+        backgroundColor: colors
+    }]
 };
 
 const config = {
-	type: 'bar',
-	data: data,
-	};
+    type: 'pie',
+    data: data,
+};
+
 new Chart(graph, config);
